@@ -2,7 +2,7 @@
   "name": "file-server",
   "version": "1.0.0",
   "description": "file server platform for distributing documents.",
-  "main": "index.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
     "start": "node server.js",
