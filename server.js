@@ -29,11 +29,14 @@ app.use(express.urlencoded({ extended: true}));
 
 //Routes api
 
-app.use('/', loginRouter);
+app.use('/login', loginRouter);
 app.use('/signup', signupRouter);
 app.use('/forgotPassword',  forgotPassword)
 
 // ************    inside file page ***************
+
+
+app.get('/', loginRouter);
 
 //Get All Files
 app.get('/allFiles', async (req, res) => {
