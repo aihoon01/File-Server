@@ -29,7 +29,7 @@ app.use(express.urlencoded({ extended: true}));
 
 //Routes api
 
-app.use('/login', loginRouter);
+app.use('/login ', loginRouter);
 app.use('/signup', signupRouter);
 app.use('/forgotPassword',  forgotPassword)
 
