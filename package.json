@@ -1,0 +1,33 @@
+{
+  "name": "file-server",
+  "version": "1.0.0",
+  "description": "file server platform for distributing documents.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aihoon01/File-Server.git"
+  },
+  "author": "STEPHEN PAAKOW AIHOON",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aihoon01/File-Server/issues"
+  },
+  "homepage": "https://github.com/aihoon01/File-Server#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "env": "0.0.2",
+    "express": "^4.18.1",
+    "express-fileupload": "^1.4.0",
+    "express-zip": "^3.0.0",
+    "nodemailer": "^6.7.5",
+    "pg": "^8.7.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
