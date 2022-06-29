@@ -17,7 +17,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(cors({
-    origin:'https://fileserva.herokuapp.com/, https://file-servar.herokuapp.com/index.html'
+    origin: process.env.URL || '*'
 }));
 
 // app.use(cors());
