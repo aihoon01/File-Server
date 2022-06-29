@@ -18,7 +18,7 @@ const resetPassword = async (e) => {
     if(newPassword === confimPassword) {
         console.log(newPassword);
         try {
-            const url = new URL('http://localhost:5000/allFiles');
+            const url = new URL('https://file-servar.herokuapp.com/allFiles');
         const response = await fetch(url, {
             method: 'POST',
             headers: {'content-type': 'application/json'},

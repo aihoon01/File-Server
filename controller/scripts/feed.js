@@ -27,7 +27,7 @@ const displayAllFiles = async () => {
     };
 
         try {
-        const url = new URL('http://localhost:5000/allFiles');
+        const url = new URL('https://file-servar.herokuapp.com/allFiles');
         const display = await fetch(url)
         if (display.ok) {
             const files = await display.json();
@@ -85,7 +85,7 @@ const displaySearch = async function(e) {
     document.getElementById("grid").innerHTML("");
     
     try {
-        const url = new URL('http://localhost:5000/fileSearch');
+        const url = new URL('https://file-servar.herokuapp.com/fileSearch');
         const response = await fetch(url, {
             method: 'POST',
             headers: {'content-type': 'application/json'},
@@ -129,7 +129,7 @@ const downloadEmailCount = async (click_id) => {
     }
 
     try {
-        const url = new URL('http://localhost:5000/fileEmailCount');
+        const url = new URL('https://file-servar.herokuapp.com/fileEmailCount');
         const response = await fetch(url, {
             method: 'POST',
             headers: {'content-type': 'application/json'},
@@ -158,7 +158,7 @@ const fileToEmail = async (click_id) => {
     };
 
 try {
-    const url = new URL('http://localhost:5000/fileEmail');
+    const url = new URL('https://file-servar.herokuapp.com/fileEmail');
     const response = await fetch (url, {
         method: 'POST',
         headers: {'content-type': 'application/json'},
@@ -201,7 +201,7 @@ const uploadings = async (e) => {
     // const titleval = document.getElementById('title').value;
     // const descriptionval = document.getElementById('description').value;
 try {
-    const url = new URL('http://localhost:5000/fileUpload');
+    const url = new URL('https://file-servar.herokuapp.com/fileUpload');
     const response = await fetch(url, {
     method: 'POST',
         enctype: {'content-type': 'multipart/form-data'},

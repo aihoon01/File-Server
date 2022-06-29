@@ -6,7 +6,7 @@ try {
     const emailVal= document.getElementById('email').value;
     const passwordVal= document.getElementById('password').value;
 
-    const url = new URL('http://localhost:5000/signup');
+    const url = new URL('https://file-servar.herokuapp.com/signup');
     const response = await fetch(url, {
         method: 'POST',
         headers: {'content-type': 'application/json'},

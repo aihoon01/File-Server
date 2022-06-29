@@ -9,7 +9,7 @@ const getData = async (e) => {
     const emailvalue = document.getElementById("email").value;
     const passwordvalue = document.getElementById("password").value;
 
-    const url = new URL('http://localhost:5000/login');
+    const url = new URL('https://file-servar.herokuapp.com/login');
     console.log(url);
 
     try {
