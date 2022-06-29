@@ -1,26 +1,26 @@
 CREATE TABLE users (
-    userId serial PRIMARY KEY,
+    userid serial PRIMARY KEY,
     username text NOT NULL,
     password varchar(50) NOT NULL,
     userROle text,
     email VARCHAR(50) NOT NULL UNIQUE
-)
+);
 
 CREATE TABLE files (
-    fileId uuid PRIMARY KEY,
+    fileid serial PRIMARY KEY,
     title text NOT NULL,
     description text,
     fileName text,
-    createdBy int REFERENCES users(userId)
-)
+    createdby int REFERENCES users(userId)
+);
 
 CREATE TABLE emails (
-    emailId uuid PRIMARY KEY,
-    emailFile int REFERENCES files(fileId)
-    FOREIGN KEY(emailId) REFERENCES users(userId)
-)
+    emailid serial PRIMARY KEY,
+    emailfile int REFERENCES files(fileid),
+    FOREIGN KEY(emailid) REFERENCES users(userId)
+);
 
 CREATE TABLE downloads (
-    downloadId serial PRIMARY KEY,
-    downloadFile int REFERENCES files(fileId) NOT NULL
-)
+    downloadid serial PRIMARY KEY,
+    downloadfile int REFERENCES files(fileid) NOT NULL
+);
