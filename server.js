@@ -35,9 +35,9 @@ app.use('/forgotPassword',  forgotPassword)
 
 // ************    inside file page ***************
 
-app.get('/', (req, res) => {
-    res.send("Hello");
-})
+// app.get('/', (req, res) => {
+//     res.send("Hello");
+// })
 
 //Get All Files
 app.get('/allFiles', async (req, res) => {
