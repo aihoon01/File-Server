@@ -16,11 +16,11 @@ import forgotPassword from "./controller/routes/forgotPassword.js";
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors({
-    origin: 'https://file-servar.herokuapp.com/, https://file-serva.herokuapp.com/signup/signup'
-}));
+// app.use(cors({
+//     origin: 'https://file-servar.herokuapp.com/, https://file-serva.herokuapp.com/signup/signup'
+// }));
 
-// app.use(cors());
+app.use(cors());
 
 app.use(uploadLib());
 app.use(express.json());
