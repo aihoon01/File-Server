@@ -33,11 +33,11 @@ const displayAllFiles = async () => {
             const files = await display.json();
             console.log(files);
             let grid = document.getElementById('grid');
-            let gridContent = document.createElement('gridContent');
-            gridContent.className = 'gridCon';
-            gridContent.innerHTML = "";
-            document.body.appendChild(gridContent);
-            // let gridContent = "";
+            // let gridContent = document.createElement('gridContent');
+            // gridContent.className = 'gridCon';
+            // gridContent.innerHTML = "";
+            // document.body.appendChild(gridContent);
+            let gridContent = "";
             files.forEach(file => {
                 console.log(file.filename)
                 gridContent = `
@@ -51,11 +51,11 @@ const displayAllFiles = async () => {
                     <div id="description_field" class="description_field">${file.description}</div>
                 </div>
                 `;
-                // grid.appendChild(gridContent);
+                grid.append(gridContent);
                 // console.log(gridContent.innerHTML)
                 // grid.append(gridContent.innerHTML);
                 // grid.innerHTML= groappendChild(gridContent);
-                grid.innerHTML = gridContent;
+                // grid.innerHTML = gridContent;
             });
 
         } else {
